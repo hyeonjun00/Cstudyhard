@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS  //vs에서도 scanf()사용할 수 있게.
 //경찰 조서 쓰기
 //이름, 나이, 몸무게, 키, 범죄명을 입력받아 출력하는 프로그램 작성
 
@@ -6,27 +7,27 @@ int main(void) {
 	//이름 입력
 	char name[256];
 	printf("이름입력: ");
-	scanf_s("%s", &name, sizeof(name));
+	scanf("%s", &name);
 
 	//나이 입력
 	int age;
 	printf("나이입력: ");
-	scanf_s("%d", &age, sizeof(age));
+	scanf("%d", &age);
 
 	//몸무게 입력
 	float weight;
 	printf("몸무게 입력: ");
-	scanf_s("%f", &weight);
+	scanf("%f", &weight);
 
 	//키 입력 double사용 해보자.
 	double height;
 	printf("키 입력: ");
-	scanf_s("%lf", &height);
+	scanf("%lf", &height);
 
 	//범죄 명 입력
 	char crime[256];
 	printf("범죄 입력: ");
-	scanf_s("%s", crime, sizeof(crime));
+	scanf("%s", crime, sizeof(crime));
 
 	//기본정보 입력 완료, 출력
 

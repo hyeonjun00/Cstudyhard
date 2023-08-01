@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS  //vs에서도 scanf()사용할 수 있게.
 #include <stdio.h> //stdio.h는 표준 입출력 함수를 포함한 헤더 파일, printf() scanf()포함
 
 
@@ -79,7 +80,7 @@ int main5(void) {
 int main6(void) {
 	int input;
 	printf("값을 입력하세요 : ");
-	scanf_s("%d", &input); //포인터, &는 메로리 주소를 나타날 때 사용한다. &input은 input 변수가 할당된 메모리 주소를 의미, 이 주소에 입력받은 값을 넣는다.
+	scanf("%d", &input); //포인터, &는 메로리 주소를 나타날 때 사용한다. &input은 input 변수가 할당된 메모리 주소를 의미, 이 주소에 입력받은 값을 넣는다.
 	printf("값이 입력되었습니다 : %d ", input);
 	return 0;
 
@@ -88,7 +89,7 @@ int main6(void) {
 int main7(void) {
 	int one, two, three;
 	printf("정수 3개 입력하세요: ");
-	scanf_s("%d %d %d", &one, &two, &three);
+	scanf("%d %d %d", &one, &two, &three);
 	printf("첫번째 값: %d\t", one);
 	printf("두번째 값: %d\t", two);
 	printf("세번째 값: %d\t", three);
@@ -107,7 +108,7 @@ int main8(void) {
 
 int main9(void) {
 	char str[256];
-	scanf_s("%s", str, sizeof(str));
+	scanf("%s", str);
 	printf("%s\n", str); //배열일때는 &표시없이 변수명만 작성하면 된다. 나중에 포인터로 배열에 접근하는 법 배우자.
 	return 0;
 }
