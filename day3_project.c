@@ -4,31 +4,26 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h> 
-int main(void) {
-	srand(time(NULL));
-	int num = rand() % 100 + 1;
-	printf("정답 : %d\n", num);
-	int answer = 0;
-	int chance = 5;
+#include <stdio.h>
 
-	while (true) {
-		printf("남은 기회 %d번 \n", chance--);
-		printf("1에서 100사이 숫자를 맞춰봐:");
-		scanf("%d", &answer);
-		if (answer > num) {
-			printf("Down ↓\n\n ");
-		}
-		else if (answer == num) {
-			printf("정답입니다!\n\n");
-			break;
-		}
-		else if (answer < num) {
-			printf("UP ↑\n\n");
-		}
-		if (chance == 0) {
-			printf("실패했습니다.\n");
-			break;
-		}
-	}
-	return 0;
+#include <stdio.h>
+
+int main()
+{
+    int count = 5;
+    int num, answer;
+    printf("숫자: ");
+    scanf("%d", &answer);
+    while (count > 0)
+    {
+        printf("남은 기회 %d번\n", count);
+        printf("숫자를 맞혀보세요.(1~100)");
+        scanf("%d", &num);
+        if (num == answer) printf("정답입니다!\n");
+        else if (num > answer) printf("DOWN ↓\n");
+        else printf("UP ↑\n");
+
+        count--;
+    }
+    return 0;
 }
